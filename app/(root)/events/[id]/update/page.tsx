@@ -2,7 +2,7 @@ import EventForm from "@/components/shared/EventForm";
 import { auth } from "@clerk/nextjs";
 import React from "react";
 
-function CreateEvent() {
+function UpdateEvent() {
   const { sessionClaims } = auth();
   const userId = sessionClaims?.userId as string;
   return (
@@ -19,4 +19,4 @@ function CreateEvent() {
   );
 }
 
-export default CreateEvent;
+export default UpdateEvent;
